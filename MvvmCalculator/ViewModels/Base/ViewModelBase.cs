@@ -9,6 +9,14 @@ namespace MvvmCalculator.ViewModels.Base
 {
     public class ViewModelBase:BindableBase
     {
-        
+        protected ViewModelBase()
+        {
+            RegisterCommand();
+        }
+
+        protected virtual void RegisterCommand()
+        {
+
+        }
     }
 }
