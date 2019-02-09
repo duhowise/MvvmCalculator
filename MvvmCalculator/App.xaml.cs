@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using CommonServiceLocator;
+using MvvmCalculator.Core.Calculators;
 using MvvmCalculator.Views;
 using Prism.Ioc;
 using Prism.Unity;
@@ -19,7 +20,9 @@ namespace MvvmCalculator
     {
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-         
+         containerRegistry.Register<ICalculator,ExpressionCalculator>();
+      
+
         }
 
         protected override Window CreateShell()
